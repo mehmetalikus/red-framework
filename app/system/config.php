@@ -14,7 +14,7 @@ $config["language"] = (isset($_SESSION["language"])) ? $_SESSION["language"] : "
 define('DIRECTORY', realpath('.'));
 define('CONTROLLER', DIRECTORY . '/app/controller/');
 define('VIEW', DIRECTORY . '/app/view/');
-define('BASE_URL', "http://" . $_SERVER["SERVER_NAME"] );
+define('BASE_URL', "http://" . $_SERVER["SERVER_NAME"] . "/custom-framework/" );
 define('APP_NAME', "CUSTOM FRAMEWORK");
 
 # 1 DAY

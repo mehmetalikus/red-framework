@@ -1,4 +1,4 @@
-<?php require view("head", "layout/"); ?>
+<?php require layout("head", "layout/"); ?>
 <body>
 	<div class="container h-100 content">
 	  <div class="row h-100 justify-content-center align-items-center text-center">
@@ -14,6 +14,6 @@
 	  </div>
 	</div>
 	
-	<?php require view("script-manager", "layout/"); ?>
+	<?php require layout("script-manager", "layout/"); ?>
 </body>
 </html>

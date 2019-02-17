@@ -29,6 +29,18 @@ class Route
 					call_user_func_array($call, $params);
 					exit;
 				}
+				else {
+                    $controller = explode('@', $call);
+                    $className = explode('/', $controller[0]);
+                    $className = end($className);
+                    $controllerFile = DIRECTORY . '/app/controller/controller.' . strtolower($controller[0]) . '.php';
+                    
+                    if (file_exists($controllerFile)) {
+                        require $controllerFile;
+                        call_user_func_array([new $className, $controller[1]], $params);
+                    }
+                    
+                }
 			}
 		}
 	}

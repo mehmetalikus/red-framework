@@ -2,7 +2,7 @@
 <?php if($cache->readCacheFile() == false): ?>
 <?php $cache->start(); ?>
 
-	<?php require view("head", "layout/"); ?>
+	<?php require layout("head", "layout/"); ?>
 	<body>  	
 		<div class="container">
 			<div class="row">
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<?php require view("script-manager", "layout/"); ?>
+		<?php require layout("script-manager", "layout/"); ?>
 		<script type="text/javascript">
 		// OR CREATE EVENT LISTENER IN MAIN.JS
 			function sample(){

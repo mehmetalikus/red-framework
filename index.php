@@ -1,16 +1,13 @@
 <?php
 
-    require "app/init.php";
+require_once "app/system/config.php";
+require_once "app/language/" . $config["language"] . "/language.php";
+require "app/init.php";
 
-    $_URL = get("url");
-    $_URL = array_filter(explode("/", $_URL));
 
-    if(!isset($_URL[0])) {
-        $_URL[0] = "index";
-    }
 
-    if(!file_exists(controller($_URL[0]))) {
-        $_URL[0] = "index";
-    }
- 
-    require controller($_URL[0]);
+Route::get("/ajax", "ajax@index", "post");
+Route::get("/", "Index@Dashboard");
+Route::get("/ajaxExample", "Index@ajaxExample");
+Route::get("/user/all", "User@getAll");
+Route::get("/language/{url}", "Language@switch");
