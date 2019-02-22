@@ -2,12 +2,7 @@
 
 class Database implements IDatabase
 {
-	/*
-	private $host = "localhost";
-	private $database = "redkit";
-	private $user = "root";
-	private $password = "";
-	*/
+
 	protected $db;
 
 	public function __construct(){
@@ -23,4 +18,5 @@ class Database implements IDatabase
 		}
 
 	}
+
 }

@@ -4,12 +4,10 @@ class User extends Controller
 {
 		
 	public function getAll(){
-	 	$usersModel = $this->model('usermodel');
-		$user = $usersModel->getAll();
+	 	$usersModel = $this->model('UserModel');
+		$users = $usersModel->getAll();
 
-		$this->view([
-			"userList" => $user
-		], "deneme", "d/");
+		echo json_encode($users, JSON_UNESCAPED_UNICODE);
 
 	}
 

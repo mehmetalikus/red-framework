@@ -1,12 +1,7 @@
 <?php
-/*
-function controller($controllerName, $folder = ""){
-    return CONTROLLER . $folder . "controller." . $controllerName . ".php";
-}
-*/
 
 function layout($viewName, $folder = ""){
-    return VIEW . $folder . "view." .$viewName . ".php";
+    return VIEW . $folder . "view." .$viewName . ".php"; // HEAD. FOOTER.
 }
 
 function page_load_time($start){

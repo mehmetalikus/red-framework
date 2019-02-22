@@ -1,14 +1,13 @@
 <?php 
 
 function __($_key) {
-	global $lang;
+	global $lang; // ARRAY DEGISKENI
 
 	if(isset($lang[$_key]))
 		return $lang[$_key];
 	else
 	 	return $_key;
 }
-
 
 function changeLanguage(){
 	if(isset($_SESSION["language"]) && $_SESSION["language"] == "tr"){

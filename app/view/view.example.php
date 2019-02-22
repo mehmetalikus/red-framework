@@ -1,6 +1,6 @@
-<?php $cache = new Cache("index", CACHE_EXPIRE_DATE ); ?>
+<?php $cache = new Cache("example", APP()["CACHE.EXPIRE_DATE"] ); ?>
 <?php if($cache->readCacheFile() == false): ?>
-<?php $cache->start(); ?>
+<?php $cache->start(); ?> <!-- CACHE START -->
 
 	<?php require layout("head", "layout/"); ?>
 	<body>  	
@@ -46,5 +46,5 @@
 	</body>
 	</html>
 
-<?php $cache->finish() ?>
+<?php $cache->finish() ?> <!-- CACHE END -->
 <?php endif ?>

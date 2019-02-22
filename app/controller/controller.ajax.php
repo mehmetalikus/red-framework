@@ -11,4 +11,8 @@ class Ajax extends Controller
 		else
 		echo json_encode(["error-message" => __("POST YOK")], JSON_UNESCAPED_UNICODE);
 	}
+
+	public function AjaxExample(){
+		return $this->view(["title" => __("AJAX Örnekleri")], "example");
+	}
 }

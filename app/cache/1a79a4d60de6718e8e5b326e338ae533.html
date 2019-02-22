@@ -1,9 +1,9 @@
 
 	<!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>CUSTOM FRAMEWORK - AJAX İşlemleri</title>
+	<title>CUSTOM FRAMEWORK - AJAX Examples</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="http://localhost/custom-framework/assets/css/style.css">
@@ -11,22 +11,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-sm-8 mt-5">
-					<a href="http://localhost/custom-framework/" class="btn btn-warning"> Geri</a>
+					<a href="http://localhost/custom-framework/" class="btn btn-warning"> Back</a>
 					<hr>
 					<form onsubmit="return false;" method="post">
 						<div class="form-group">
-							<input type="text" name="userName" class="form-control" placeholder="Ad">
+							<input type="text" name="userName" class="form-control" placeholder="Name">
 						</div>
 						<div class="form-group">
-							<input type="text" name="userAge" class="form-control" placeholder="Yaş">
+							<input type="text" name="userAge" class="form-control" placeholder="Age">
 						</div>
 						<div class="form-group">
-							<button class="btn btn-block btn-success" onclick="sample()"> Gönder</button>
+							<button class="btn btn-block btn-success" onclick="sample()"> Send</button>
 						</div>
 					</form>
 				</div>
 				<div class="col-12 col-sm-4 mt-5">
-					AJAX Cevap :
+					AJAX Result :
 					<div class="ajaxData"></div>
 				</div>
 			</div>
@@ -36,12 +36,13 @@
 	var init = { 
 		url: 'http://localhost/custom-framework/',
 		ajax: 'http://localhost/custom-framework/ajax',
-		language: 'tr'
+		language: 'en'
 	}
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="http://localhost/custom-framework/assets/js/main.js"></script>		<script type="text/javascript">
+<script src="http://localhost/custom-framework/assets/js/main.js"></script>
+<script src="http://localhost/custom-framework/assets/js/localization.js"></script>		<script type="text/javascript">
 		// OR CREATE EVENT LISTENER IN MAIN.JS
 			function sample(){
 				var userName = $("input[name='userName']").val().trim();

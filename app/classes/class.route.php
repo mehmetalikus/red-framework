@@ -17,6 +17,7 @@ class Route
         if (in_array($_SERVER['REQUEST_METHOD'], $method)) {
             $patterns = [
                 '{url}' => '([0-9a-zA-Z]+)',
+                '{text}' => '([a-zA-Z]+)',
                 '{id}' => '([0-9]+)'
             ];
 

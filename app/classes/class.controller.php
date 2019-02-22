@@ -11,7 +11,7 @@ class Controller
 
     public function model($name)
     {
-        require DIRECTORY . '/app/classes/class.' . strtolower($name) . '.php';
+        require DIRECTORY . '/app/classes/Model/' . strtolower($name) . '.php';
         return new $name();
     }
 }

@@ -2,9 +2,9 @@
 
 class Language extends Controller
 {
-	public function switch($langCode = null){
+	public function switch($langCode = "tr"){
 		if($langCode != NULL){
-			$langCode = filterSTR($_URL[1]);
+			$langCode = filterSTR($langCode);
 			if($langCode == "en" || $langCode == "tr"){
 				$_SESSION["language"] = $langCode;
 			}
