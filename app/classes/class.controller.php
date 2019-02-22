@@ -2,7 +2,7 @@
 
 class Controller
 {
-	public function view( $data = [], $name, $folder = "")
+	public function view($name, $data = [], $folder = "")
     {
         #require __DIR__ . '/view/' . strtolower($name) . '.php';
      	extract($data);
