@@ -13,6 +13,6 @@ class Ajax extends Controller
 	}
 
 	public function AjaxExample(){
-		return $this->view(["title" => __("AJAX Örnekleri")], "example");
+		return $this->view("example", ["title" => __("AJAX Örnekleri")]);
 	}
 }
