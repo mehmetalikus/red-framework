@@ -1,2 +1,7 @@
 RewriteEngine On
 RewriteRule ^([0-9a-zA-Z-_/]+)$ index.php?url=$1 [QSA]
+
+# 1 week for most static assets
+<filesMatch ".(jpg|jpeg|png|gif|ico|svg)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>

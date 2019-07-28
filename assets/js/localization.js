@@ -1,5 +1,9 @@
-var en = {
+/* 
+	If you want some localization on frontend you can use this files.
+*/
+
+let en = {
 	Merhaba: "Hello"
 };
 
-var tr = {}
+let tr = {}

@@ -2,102 +2,20 @@
 
 class UserModel extends Database
 {
-	private $id;
-	private $name;
-	private $lastName;
+    private $userId;
+    private $userName;
+    private $userLastName;
 
-	protected $collection = [];
-
-	public function getAll(){
-		$query = $this->db->prepare("
-			SELECT * FROM user
-		");
-		if($query->execute()){
-			$this->collection = $query->fetchAll(PDO::FETCH_ASSOC);
-			return $this->collection;
-		}
-		else
-			$conn = null;
-		return false;
-	}
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
+    public function __construct(){
+        parent::__construct();
     }
 
-    /**
-     * @param mixed $id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
+    public function __get($p){
+        return $this->$p
     }
 
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
+    public function __set($k, $v){
+        return $this->$k = $v;
     }
 
-    /**
-     * @param mixed $name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * @param mixed $lastName
-     *
-     * @return self
-     */
-    public function setLastName($lastName)
-    {
-        $this->lastName = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCollection()
-    {
-        return $this->collection;
-    }
-
-    /**
-     * @param mixed $collection
-     *
-     * @return self
-     */
-    public function setCollection($collection)
-    {
-        $this->collection = $collection;
-
-        return $this;
-    }
 }

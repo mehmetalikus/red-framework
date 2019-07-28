@@ -1,11 +1,22 @@
-<?php 
+<?php
+/*
+	THIS IS THE WHERE YOU SET MANUAL ROUTES & Other Things.
+	
+	@important
+	IF YOU WANT SOME MANUAL ROUTES YOU SHOULD WRITE THEM FIRST.
+	IF YOU DON'T YOUR RULE WONT WORK
 
-Route::get("/", "Index@Dashboard");
-Route::get("/ajaxExample", "ajax@ajaxExample");
-Route::get("/ajax", "ajax@index", "post");
-Route::get("/language/{text}", "Language@switch");
-Route::get("/user", "User@getAll");
+	Route::start() gives you dynamic route function.
+	for example if your url like this {
+		http://example.com/Product/Update/1
 
-Route::get("/user/{id}", function(Int $id): Void {
-	echo "User ID : " . $id;
-}, "GET|POST");
+		Product is your ClassName
+		Update is your Method inside Product
+		1 is your parameter. After ClassName & Method everything in uri is your parameter.
+	}
+	
+	Good Luck
+*/
+
+Route::run("/", "Index@Welcome");
+Route::start();

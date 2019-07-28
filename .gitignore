@@ -1,2 +1,3 @@
-app/cache/
-.phpintel/
+compiles
+.phpintel
+app/cache

@@ -2,16 +2,16 @@
 
 class Controller
 {
-	public function view($name, $data = [], $folder = "")
+	public function view($name, $data = [])
     {
-        #require __DIR__ . '/view/' . strtolower($name) . '.php';
-     	extract($data);
-     	require VIEW . $folder . "view." . strtolower($name) . ".php";
+        include "class.blade.php";
+        $blade = new \eftec\bladeone\BladeOne(VIEW, null, \eftec\bladeone\BladeOne::MODE_DEBUG);
+     	echo $blade->run($name, $data);
     }
 
     public function model($name)
     {
-        require DIRECTORY . '/app/classes/Model/' . strtolower($name) . '.php';
+        require DIRECTORY . '/app/classes/Model/' . $name . '.php';
         return new $name();
     }
 }

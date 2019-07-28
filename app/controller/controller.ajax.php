@@ -2,7 +2,7 @@
 
 class Ajax extends Controller
 {
-	public function index(){
+	public function Home(){
 		if(post("type")) {
 			if(file_exists(DIRECTORY . "/app/ajax/" . post("type") . ".php")){
 				require DIRECTORY . "/app/ajax/" . post("type") . ".php";
