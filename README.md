@@ -1,4 +1,4 @@
 # red-framework
 
 
-<img src="https://i.hizliresim.com/r03J1N.png" />
+<img src="https://raw.githubusercontent.com/mehmetalikus/red-framework/master/logo.png" />
