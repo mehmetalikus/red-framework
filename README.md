@@ -1,6 +1,7 @@
 # RED FRAMEWORK
-
-LIGHTEST PHP FRAMEWORK THAT CAN SERVE YOU LIKE THE OTHERS. 
+<p align="center">
+LIGHTEST PHP FRAMEWORK THAT CAN SERVE YOU LIKE THE OTHERS.
+</p>
 ![enter image description here](https://i.hizliresim.com/r03J1N.png)
 
 
